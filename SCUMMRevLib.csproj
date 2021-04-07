@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8C118C1-A59C-45DF-9524-64DFFD226A0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SCUMMRevLib</RootNamespace>
+    <AssemblyName>SCUMMRevLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="fastjson">
+      <HintPath>..\packages\fastJSON.2.1.12.0\lib\net40\fastjson.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Annotations\AnnotationMap.cs" />
+    <Compile Include="Annotations\Annotator.cs" />
+    <Compile Include="Chunks\BNDTChunk.cs" />
+    <Compile Include="Chunks\BUNDChunk.cs" />
+    <Compile Include="Chunks\Chunk.cs" />
+    <Compile Include="Chunks\ChunkList.cs" />
+    <Compile Include="Chunks\ChunkSelectException.cs" />
+    <Compile Include="Chunks\ChunkStream.cs" />
+    <Compile Include="Chunks\SCUMM1Chunk.cs" />
+    <Compile Include="Chunks\SCUMM1ChunkSpec.cs" />
+    <Compile Include="Chunks\SCUMM1ChunkSpecs.cs" />
+    <Compile Include="Decoders\Text\SCUMM1DisassemblerDecoder.cs" />
+    <Compile Include="Decoders\Text\SCUMM3DisassemblerDecoder.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM4.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM5.cs" />
+    <Compile Include="FileFormats\D64File.cs" />
+    <Compile Include="FileFormats\Factories\BUNDFactory.cs" />
+    <Compile Include="FileFormats\Factories\FileFactory.cs" />
+    <Compile Include="FileFormats\Factories\ForgeFactory.cs" />
+    <Compile Include="FileFormats\Factories\KAPLFactory.cs" />
+    <Compile Include="FileFormats\Factories\LABNFactory.cs" />
+    <Compile Include="FileFormats\Factories\LB83Factory.cs" />
+    <Compile Include="FileFormats\Factories\SCUMM1Factory.cs" />
+    <Compile Include="FileFormats\Factories\SCUMM3Factory.cs" />
+    <Compile Include="FileFormats\Factories\SCUMM5Factory.cs" />
+    <Compile Include="FileFormats\Factories\TTARCH2Factory.cs" />
+    <Compile Include="FileFormats\Factories\TTARCHFactory.cs" />
+    <Compile Include="FileFormats\Factories\UnknownFactory.cs" />
+    <Compile Include="FileFormats\FileFormatException.cs" />
+    <Compile Include="FileFormats\SCUMM1File.cs" />
+    <Compile Include="FileFormats\SRXORFile.cs" />
+    <Compile Include="Utils\SCUMMUtils.cs" />
+    <Compile Include="Chunks\FileChunk.cs" />
+    <Compile Include="Chunks\FileChunkSpec.cs" />
+    <Compile Include="Chunks\FileChunkSpecs.cs" />
+    <Compile Include="Chunks\ForgeChunk.cs" />
+    <Compile Include="Chunks\ForgeFileChunk.cs" />
+    <Compile Include="Chunks\ImageIndex.cs" />
+    <Compile Include="Chunks\KAPLChunk.cs" />
+    <Compile Include="Chunks\LABNChunk.cs" />
+    <Compile Include="Chunks\LB83Chunk.cs" />
+    <Compile Include="Chunks\ObjectInfo.cs" />
+    <Compile Include="Chunks\RootChunk.cs" />
+    <Compile Include="Chunks\SCUMM3Chunk.cs" />
+    <Compile Include="Chunks\SCUMM3ChunkSpec.cs" />
+    <Compile Include="Chunks\SCUMM3ChunkSpecs.cs" />
+    <Compile Include="Chunks\SCUMM5Chunk.cs" />
+    <Compile Include="Chunks\SCUMM5ChunkSpec.cs" />
+    <Compile Include="Chunks\SCUMM5ChunkSpecs.cs" />
+    <Compile Include="Chunks\SizeFormat.cs" />
+    <Compile Include="Chunks\TellTaleFileChunk.cs" />
+    <Compile Include="Chunks\TTARCHChunk.cs" />
+    <Compile Include="Chunks\TTARCH2Chunk.cs" />
+    <Compile Include="Chunks\UnknownChunk.cs" />
+    <Compile Include="Decoders\BaseDecoder.cs" />
+    <Compile Include="Decoders\Binary\BaseBinaryDecoder.cs" />
+    <Compile Include="Decoders\Binary\DXTtoDDSDecoder.cs" />
+    <Compile Include="Decoders\Binary\GzipDecoder.cs" />
+    <Compile Include="Decoders\Binary\MidiDecoder.cs" />
+    <Compile Include="Decoders\Boxes\BaseBoxDecoder.cs" />
+    <Compile Include="Decoders\Boxes\BoxFlags.cs" />
+    <Compile Include="Decoders\Boxes\SCUMM5BoxDecoder.cs" />
+    <Compile Include="Decoders\Boxes\ScummBox.cs" />
+    <Compile Include="Decoders\DecoderFormat.cs" />
+    <Compile Include="Decoders\DecoderManager.cs" />
+    <Compile Include="Decoders\DecoderMap.cs" />
+    <Compile Include="Decoders\DecodesChunksAttribute.cs" />
+    <Compile Include="Decoders\DecodingException.cs" />
+    <Compile Include="Decoders\IDecoderManager.cs" />
+    <Compile Include="Decoders\Images\BaseImageDecoder.cs" />
+    <Compile Include="Decoders\Images\BMDecoder.cs" />
+    <Compile Include="Decoders\Images\D3dtxDecoder.cs" />
+    <Compile Include="Decoders\Images\GrimeBMImageDecoder.cs" />
+    <Compile Include="Decoders\Images\IMAGDecoder.cs" />
+    <Compile Include="Decoders\Images\ImageInfo.cs" />
+    <Compile Include="Decoders\Images\MMucusImageDecoder.cs" />
+    <Compile Include="Decoders\Images\MMucusObjectImageDecoder.cs" />
+    <Compile Include="Decoders\Images\RMIMDecoder.cs" />
+    <Compile Include="Decoders\Palettes\BasePaletteDecoder.cs" />
+    <Compile Include="Decoders\Palettes\AHDRPaletteDecoder.cs" />
+    <Compile Include="Decoders\Palettes\XPALPaletteDecoder.cs" />
+    <Compile Include="Decoders\Palettes\PADecoder.cs" />
+    <Compile Include="Decoders\Palettes\Palette.cs" />
+    <Compile Include="Decoders\Palettes\StandardPaletteDecoder.cs" />
+    <Compile Include="Decoders\Sound\BaseSoundDecoder.cs" />
+    <Compile Include="Decoders\Sound\IMCDecoder.cs" />
+    <Compile Include="Decoders\Sound\CreativeVoiceDecoder.cs" />
+    <Compile Include="Decoders\Sound\IMXDecoder.cs" />
+    <Compile Include="Decoders\Sound\SoundInfo.cs" />
+    <Compile Include="Decoders\Text\BaseTextDecoder.cs" />
+    <Compile Include="Decoders\Text\COMPDecoder.cs" />
+    <Compile Include="Decoders\Text\SCUMM3DecompilerDecoder.cs" />
+    <Compile Include="Decoders\Text\DirectoryDecoder.cs" />
+    <Compile Include="Decoders\Text\LOFFDecoder.cs" />
+    <Compile Include="Decoders\Text\MCMPDecoder.cs" />
+    <Compile Include="Decoders\Text\PlainTextDecoder.cs" />
+    <Compile Include="Decoders\Text\RNAMDecoder.cs" />
+    <Compile Include="Decoders\Text\SCUMM5DecompilerDecoder.cs" />
+    <Compile Include="Decoders\Text\SCUMM5DisassemblerDecoder.cs" />
+    <Compile Include="Decoders\Text\Syntax.cs" />
+    <Compile Include="Decoders\Video\BaseVideoDecoder.cs" />
+    <Compile Include="Decoders\Video\CMISMUSHDecoder.cs" />
+    <Compile Include="Decoders\Video\VideoInfo.cs" />
+    <Compile Include="Decompilers\SCUMM\Disassembler.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM1.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM3.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM6.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMM3Decompiler.cs" />
+    <Compile Include="Decompilers\SCUMM\DisassemblerSCUMM8.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMM5Decompiler.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMCommand.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMDecompilerException.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMLineBuilder.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMOpcodes.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMDecompiler.cs" />
+    <Compile Include="Decompilers\SCUMM\SCUMMParameter.cs" />
+    <Compile Include="Encryption\TellTaleFileStructureInfo.cs" />
+    <Compile Include="Encryption\TellTaleKeyManager.cs" />
+    <Compile Include="FileFormats\BUNDFile.cs" />
+    <Compile Include="FileFormats\FileManager.cs" />
+    <Compile Include="FileFormats\FileTypeAttribute.cs" />
+    <Compile Include="FileFormats\ForgeFile.cs" />
+    <Compile Include="FileFormats\IFileManager.cs" />
+    <Compile Include="FileFormats\KAPLFile.cs" />
+    <Compile Include="FileFormats\LABNFile.cs" />
+    <Compile Include="FileFormats\LB83File.cs" />
+    <Compile Include="FileFormats\SCUMM3File.cs" />
+    <Compile Include="FileFormats\SCUMM5File.cs" />
+    <Compile Include="FileFormats\SRFile.cs" />
+    <Compile Include="FileFormats\TTArch2File.cs" />
+    <Compile Include="FileFormats\TTArchFile.cs" />
+    <Compile Include="FileFormats\UnknownFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScummRevisitedException.cs" />
+    <Compile Include="SpecScript\ChunkSpecifications.cs" />
+    <Compile Include="SpecScript\Compiler.cs" />
+    <Compile Include="SpecScript\CompilerException.cs" />
+    <Compile Include="SpecScript\InputType.cs" />
+    <Compile Include="SpecScript\InternalType.cs" />
+    <Compile Include="SpecScript\Interpreter.cs" />
+    <Compile Include="SpecScript\InterpreterException.cs" />
+    <Compile Include="SpecScript\Opcodes.cs" />
+    <Compile Include="SpecScript\Scanner.cs" />
+    <Compile Include="SpecScript\ScannerException.cs" />
+    <Compile Include="SpecScript\Token.cs" />
+    <Compile Include="SpecScript\TokenType.cs" />
+    <Compile Include="SpecScript\VariableInfo.cs" />
+    <Compile Include="Utils\Images\Color.cs" />
+    <Compile Include="Utils\Images\DDSImage.cs" />
+    <Compile Include="Utils\HexUtils.cs" />
+    <Compile Include="Utils\ImageByteArray.cs" />
+    <Compile Include="Utils\LEBitStream.cs" />
+    <Compile Include="Encryption\Blowfish.cs" />
+    <Compile Include="Encryption\TellTaleBlowfishZlibStream.cs" />
+    <Compile Include="Utils\StringExtensions.cs" />
+    <Compile Include="Utils\WordBitStream.cs" />
+    <Compile Include="Utils\Images\PaletteColor.cs" />
+    <Compile Include="Utils\FileTypeInfos.cs" />
+    <Compile Include="Utils\Point.cs" />
+    <Compile Include="Utils\Size.cs" />
+    <Compile Include="Encryption\XorStream.cs" />
+    <Compile Include="Viewers\ActionParameters.cs" />
+    <Compile Include="Viewers\BinarySaver.cs" />
+    <Compile Include="Utils\FileTypeInfo.cs" />
+    <Compile Include="Viewers\IViewer.cs" />
+    <Compile Include="Viewers\PaletteToAcoSaver.cs" />
+    <Compile Include="Viewers\Saver.cs" />
+    <Compile Include="Viewers\TextSaver.cs" />
+    <Compile Include="Viewers\ViewerManager.cs" />
+    <Compile Include="Viewers\ViewerMap.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Katana\Katana.csproj">
+      <Project>{01E4C9F7-6FE3-4F6C-BAE0-65A9D3D9BD11}</Project>
+      <Name>Katana</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="data\telltalekeys.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
